@@ -112,14 +112,6 @@
       "owner_name": "John Doe",
       "status": "Not Accepted",
       "id": 11
-    },
-    {
-      "problem": "pc not working",
-      "owner_name": "Adam Smith",
-      "brand": "hp",
-      "cost": "",
-      "status": "Not Accepted",
-      "id": 12
     }
   ]
 }

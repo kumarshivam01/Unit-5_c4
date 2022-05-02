@@ -1,19 +1,13 @@
 // action types
-export const userStatus="STATUS"
-export const orders="ORDERS"
+
 // Action Creators
 
-export const addStatus=(data)=>{
-    return {
-        type:userStatus,
-        payload:data
 
-    }
-}
+export const ADD_AUTH="ADD_AUTH";
 
-export const ALLOrders=(data)=>{
+export const addauth=(data)=>{
     return {
-        type:orders,
+        type:ADD_TODO,
         payload:data
     }
 }

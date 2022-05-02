@@ -1,16 +1,20 @@
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { addStatus } from "../Redux/actions";
-import { useEffect } from "react";
+import { useContext } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
+import { AuthContext } from "../Contexts/Authcontext";
+
 export const Logout = () => {
+  const navigate=useNavigate();
   // Logout component, just log user out and take him to `/` homepage
-const dispatch=useDispatch()
-const navigate=useNavigate()
+
   // suggestion: if you are storing anyting in redux it's a good idea to
   // empty it before loggin out. eg: order
-useEffect(()=>{
-  dispatch(addStatus({}))
-navigate("/",{replace:true})
-},[])
-  return 
+
+
+  const {handleAuth}=useContext(AuthContext);
+
+  return <button
+  onClick={()=>{
+    handleAuth(false)
+    navigate("/",{replace:true})
+  }}>Logout</button>;
 };
