@@ -1,2 +1,6 @@
 // /orders and /neworder are protected routes
-export const ProtectedRoute = ({ children }) => {};
+
+export const ProtectedRoute = ({ children }) => {
+  
+  return children  
+};
